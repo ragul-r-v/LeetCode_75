@@ -1,17 +1,14 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
-        """Merge characters in alternating order.
+        result = []
 
-        Time: O(m + n)
-        Space: O(m + n)
-        """
-        merged = []
-        longest = max(len(word1), len(word2))
+        n = min(len(word1), len(word2))
 
-        for index in range(longest):
-            if index < len(word1):
-                merged.append(word1[index])
-            if index < len(word2):
-                merged.append(word2[index])
+        for i in range(n):
+            result.append(word1[i])
+            result.append(word2[i])
 
-        return "".join(merged)
+        result.extend(word1[n:])
+        result.extend(word2[n:])
+
+        return "".join(result)

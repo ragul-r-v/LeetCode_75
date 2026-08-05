@@ -1,12 +1,13 @@
-from typing import List
-
-
 class Solution:
-    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
-        """Determine which children can reach the current maximum.
+    def kidsWithCandies(self, candies, extraCandies):
+        maximum = max(candies)
 
-        Time: O(n)
-        Space: O(n) for the answer
-        """
-        current_maximum = max(candies)
-        return [candy + extraCandies >= current_maximum for candy in candies]
+        answer = []
+
+        for candy in candies:
+            if candy + extraCandies >= maximum:
+                answer.append(True)
+            else:
+                answer.append(False)
+
+        return answer
