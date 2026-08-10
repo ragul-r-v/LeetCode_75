@@ -6,6 +6,7 @@ A personal Python repository for documenting solutions to the **LeetCode 75** st
 
 | # | Problem | Difficulty | Pattern | Status |
 |---:|---|---|---|:---:|
+| 605 | [Can Place Flowers](Arrays/0605-can-place-flowers/README.md) | Easy | Greedy + Array Traversal | ✅ |
 | 1768 | [Merge Strings Alternately](Strings/1768-merge-strings-alternately/README.md) | Easy | Two pointers | ✅ |
 | 1071 | [Greatest Common Divisor of Strings](Strings/1071-greatest-common-divisor-of-strings/README.md) | Easy | Math + strings | ✅ |
 | 1431 | [Kids With the Greatest Number of Candies](Arrays/1431-kids-with-the-greatest-number-of-candies/README.md) | Easy | Precomputation | ✅ |
@@ -15,6 +16,7 @@ A personal Python repository for documenting solutions to the **LeetCode 75** st
 ```text
 LeetCode_75/
 ├── Arrays/
+│   ├── 0605-can-place-flowers/
 │   └── 1431-kids-with-the-greatest-number-of-candies/
 ├── Strings/
 │   ├── 1071-greatest-common-divisor-of-strings/
