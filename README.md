@@ -11,6 +11,8 @@ A personal Python repository for documenting solutions to the **LeetCode 75** st
 | 1071 | [Greatest Common Divisor of Strings](Strings/1071-greatest-common-divisor-of-strings/README.md) | Easy | Math + strings | ✅ |
 | 1431 | [Kids With the Greatest Number of Candies](Arrays/1431-kids-with-the-greatest-number-of-candies/README.md) | Easy | Precomputation | ✅ |
 
+| 345 | [Reverse Vowels of a String](Strings/0345-reverse-vowels-of-a-string/README.md) | Easy | Two pointers | Complete |
+
 ## Structure
 
 ```text
