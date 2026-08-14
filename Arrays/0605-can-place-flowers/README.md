@@ -27,12 +27,13 @@ An empty plot is safe only when both neighbouring plots are empty (or the plot i
 
 ## 📝 Step-by-step algorithm
 
-1. Visit every plot in the flowerbed.
-2. Ignore plots that already contain a flower.
-3. Check whether the left plot is empty or does not exist.
-4. Check whether the right plot is empty or does not exist.
-5. If both sides are safe, plant a flower and decrease `n`.
-6. Return `True` as soon as `n` becomes zero; otherwise return whether it is zero after the traversal.
+1. Return `True` immediately when `n` is `0`, because no new flowers are needed.
+2. Visit every plot in the flowerbed.
+3. Ignore plots that already contain a flower.
+4. Check whether the left plot is empty or does not exist.
+5. Check whether the right plot is empty or does not exist.
+6. If both sides are safe, plant a flower and decrease `n`.
+7. Return `True` as soon as `n` becomes zero; return `False` if the traversal ends first.
 
 ## ✍️ Dry run
 
@@ -57,10 +58,16 @@ The answer is `True` immediately after planting at index `2`.
 ```python
 class Solution:
     def canPlaceFlowers(self, flowerbed, n):
+        if n == 0:
+            return True
+
         for i in range(len(flowerbed)):
             if flowerbed[i] == 0:
                 left_empty = i == 0 or flowerbed[i - 1] == 0
-                right_empty = i == len(flowerbed) - 1 or flowerbed[i + 1] == 0
+                right_empty = (
+                    i == len(flowerbed) - 1
+                    or flowerbed[i + 1] == 0
+                )
 
                 if left_empty and right_empty:
                     flowerbed[i] = 1
@@ -69,7 +76,7 @@ class Solution:
                     if n == 0:
                         return True
 
-        return n == 0
+        return False
 ```
 
 ## ⏱ Complexity analysis
